@@ -1,0 +1,21 @@
+$white: #fff;
+$black: #000;
+$primary: #ff9900;
+$body-color: #544837;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1110px
+);
+
+$font-size-base: 1rem;
+$font-family-base: "Poppins", sans-serif, $font-family-base;
+
+$headings-font-family: "Montserrat", sans-serif, $headings-font-family;
+
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none;

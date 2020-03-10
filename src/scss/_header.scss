@@ -1,0 +1,41 @@
+.b-header {
+  $parent: &;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__inner {
+    @extend #{$parent}__container;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo img {
+  }
+
+  &__buttons button:first-of-type {
+    margin-right: 15px;
+  }
+
+  &__menu {
+    @extend %list;
+    color: #2f281e;
+    padding-right: 30px;
+  }
+
+  &__menu-item {
+  }
+
+  &__menu-link {
+    padding-right: 25px;
+    color: #2f281e;
+    &:hover {
+      color: darken(#2f281e, 15%);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@mixin make-button(
+  $bg,
+  $color,
+  $border-color: $bg,
+  $hover-bg: darken($bg, 10%),
+  $hover-color: $color,
+  $border-hover-color: darken($border-color, 15%)
+) {
+  color: $color;
+  border-color: $border-color;
+  background-color: $bg;
+
+  &:hover {
+    color: $hover-color;
+    border-color: $border-hover-color;
+    background-color: $hover-bg;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 10px 25px;
+  line-height: 1.625;
+  border-radius: 4px;
+
+  &--primary {
+    @include make-button($bg: $primary, $color: $white);
+  }
+
+  &--outline {
+    @include make-button($bg: transparent, $color: #173a56, $border-color: #bcd0e5);
+  }
+
+}

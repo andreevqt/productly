@@ -1,0 +1,23 @@
+.b-footer {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  border-top: 1px solid rgba(#bcd0e5, 0.5);
+
+  &__logo {
+  }
+
+  &__col {
+  }
+
+  &__nav {
+    @extend %list;
+    flex-direction: column;
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-item-link {
+    display: inline-block;
+  }
+}
