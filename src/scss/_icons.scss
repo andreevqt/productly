@@ -1,0 +1,75 @@
+.b-icon {
+  $parent: &;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  color: $white;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    background-color: $white;
+    content: "";
+  }
+
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 19px;
+    filter: blur(27px);
+  }
+
+  &__inner {
+    border-radius: 19px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--purple {
+    &::before {
+      background-color: #7752be;
+    }
+    #{$parent}__inner {
+      background-color: #7752be;
+    }
+  }
+
+  &--yellow {
+    &::before {
+      background-color: #fab005;
+    }
+    #{$parent}__inner {
+      background-color: #fab005;
+    }
+  }
+
+  &--red {
+    &::before {
+      background-color: #f03e3d;
+    }
+    #{$parent}__inner {
+      background-color: #f03e3d;
+    }
+  }
+
+  &--blue {
+    &::before {
+      background-color: #4dadf7;
+    }
+    #{$parent}__inner {
+      background-color: #4dadf7;
+    }
+  }
+}

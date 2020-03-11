@@ -1,7 +1,8 @@
 .b-header {
   $parent: &;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $border-color;
 
   &__container {
     display: flex;
@@ -9,33 +10,85 @@
   }
 
   &__inner {
-    @extend #{$parent}__container;
-    margin-left: auto;
+    transform: translate(100%);
     display: flex;
-    align-items: center;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-left: auto;
+    position: fixed;
+    z-index: 1;
+    top: 63px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+    transition: transform 0.3s ease-in;
+
+    @include media-breakpoint-up(lg) {
+      overflow: visible;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      transform: translate(0);
+    }
+  }
+
+  &__toggle {
+    margin-left: auto;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
   }
 
   &__logo img {
   }
 
-  &__buttons button:first-of-type {
-    margin-right: 15px;
+  &__buttons {
+    margin: 30px auto 0 auto;
+
+    button:first-of-type {
+      margin-right: 15px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin: 0 0 0 30px;
+    }
   }
 
   &__menu {
     @extend %list;
+    flex-direction: column;
     color: #2f281e;
-    padding-right: 30px;
+    padding-top: 30px;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      padding-top: 0;
+    }
   }
 
   &__menu-item {
   }
 
   &__menu-link {
-    padding-right: 25px;
-    color: #2f281e;
+    $color: #2f281e;
+    display: block;
+    padding: 10px 15px;
+    color: $color;
+    border-bottom: 1px solid $border-color;
+
+    &--active,
     &:hover {
-      color: darken(#2f281e, 15%);
+      color: $primary;
     }
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 25px 0 0;
+      border-bottom: none;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: none;
   }
 }

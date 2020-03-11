@@ -4,3 +4,76 @@ block variables
   - var title = "Home"
 
 block content 
+  section.b-hero
+    .container-xl
+      .row
+        .b-hero__content.col-md-6
+          h2.b-hero__title.
+            The Design Thinking superpowers
+          p.b-hero__descr.
+            Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.
+          .b-hero__buttons
+            a.btn.btn--primary(href="#").
+              Get Started
+            button.btn.btn--link.btn--has-icon
+              +use("#triangle", 20, 17)
+              | Watch the video
+        img.b-hero__image.col-md-6(src="images/hero.png")
+
+  section.b-section.b-section--tests
+    .container-xl
+      .row
+        .col-md-6.mx-auto
+          h2.b-section__title.text-center.
+            We design tools to unveil your superpowers  
+      .row
+        .b-test.col-lg-3.col-md-4
+          .b-test__icon.b-icon.b-icon--purple
+            .b-icon__inner
+              +use("#cursor", 12, 18)
+          h5.b-test__title.
+            First click tests
+          p.b-test__descr.
+            While most people enjoy casino gambling
+        .b-test.col-lg-3.col-md-4
+          .b-test__icon.b-icon.b-icon--yellow
+            .b-icon__inner
+              +use("#link", 18, 18)
+          h5.b-test__title.
+            Design surveys
+          p.b-test__descr.
+            Sports betting, lottery and bingo playing for the fun
+        .b-test.col-lg-3.col-md-4
+          .b-test__icon.b-icon.b-icon--red
+            .b-icon__inner
+              +use("#heart", 18, 18)
+          h5.b-test__title.
+            Preference tests
+          p.b-test__descr.
+            The Myspace page defines the individual.
+        .b-test.col-lg-3.col-md-4
+          .b-test__icon.b-icon.b-icon--blue
+            .b-icon__inner
+              +use("#sandwatches", 18, 18)
+          h5.b-test__title.
+            Five second tests
+          p.b-test__descr.
+            Personal choices and the overall personality of the person. 
+      .d-flex
+        a.btn.btn--primary.mx-auto(href="#").
+          SIGN UP NOW
+  
+  section.b-section
+    .container-xl
+      .row
+        .col-md-6
+          h2.b-section__title.
+            Design Professionals
+          p.section__descr.
+            The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. 
+
+      
+
+
+
+

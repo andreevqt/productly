@@ -39,4 +39,14 @@
     @include make-button($bg: transparent, $color: #173a56, $border-color: #bcd0e5);
   }
 
+  &--link {
+    @include make-button($bg: transparent, $color: $primary, $border-color: transparent);
+    text-decoration: underline;
+  }
+
+  &--has-icon {
+    svg {
+      margin-right: 5px;
+    }
+  }
 }

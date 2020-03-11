@@ -12,12 +12,15 @@
     <title>Productly - Home</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700&amp;display=swap">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body><?xml version="1.0" encoding="utf-8"?><svg id="svgSprite" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><svg fill="none" viewBox="0 0 11 17" id="cursor" xmlns="http://www.w3.org/2000/svg"><path d="M10.116 9.598L.973.455a.533.533 0 00-.402-.17.575.575 0 00-.214.045A.573.573 0 000 .857v13.429c0 .232.143.437.357.527a.574.574 0 00.214.044.568.568 0 00.402-.17l2.786-2.785 1.705 4.036a.574.574 0 00.75.303l1.58-.67a.574.574 0 00.304-.75l-1.794-4.25h3.41a.573.573 0 00.527-.357.55.55 0 00-.125-.616z" fill="#fff"/></svg><svg fill="none" viewBox="0 0 16 15" id="heart" xmlns="http://www.w3.org/2000/svg"><path d="M8 14.143a.554.554 0 00.393-.16l5.562-5.358C14.035 8.545 16 6.75 16 4.607 16 1.991 14.402.43 11.732.43 10.17.429 8.705 1.66 8 2.357 7.295 1.661 5.83.43 4.268.43 1.598.429 0 1.99 0 4.607c0 2.143 1.964 3.938 2.036 4l5.571 5.375c.107.107.25.16.393.16z" fill="#fff"/></svg><svg fill="none" viewBox="0 0 18 14" id="link" xmlns="http://www.w3.org/2000/svg"><path d="M9.482 5.643l1.17.545 1.74-.518V4.455c0-2.062-1.74-3.714-3.82-3.714C6.5.741 4.75 2.384 4.75 4.43v5.535c0 .51-.41.911-.91.911s-.911-.402-.911-.91v-2.34H0V10a3.83 3.83 0 003.83 3.83c2.099 0 3.83-1.687 3.83-3.776V4.589c0-.5.411-.91.911-.91s.911.41.911.91v1.054zm4.732 1.982v2.455c0 .5-.41.902-.91.902s-.911-.402-.911-.902V7.67l-1.741.518-1.17-.545v2.393c0 2.098 1.723 3.794 3.83 3.794a3.83 3.83 0 003.83-3.83V7.625h-2.928z" fill="#fff"/></svg><svg fill="none" viewBox="0 0 14 17" id="sandwatches" xmlns="http://www.w3.org/2000/svg"><path d="M12.571 1.429h.858c.16 0 .285-.125.285-.286V.57a.282.282 0 00-.285-.285H.286A.282.282 0 000 .57v.572c0 .16.125.286.286.286h.857c0 3.303 1.58 5.696 3.33 6.857-1.75 1.16-3.33 3.553-3.33 6.857H.286a.282.282 0 00-.286.286V16c0 .16.125.286.286.286h13.143c.16 0 .285-.125.285-.286v-.571a.282.282 0 00-.285-.286h-.858c0-3.304-1.58-5.697-3.33-6.857 1.75-1.161 3.33-3.554 3.33-6.857zm-1.142 0a7.915 7.915 0 01-.76 3.428H3.046a7.915 7.915 0 01-.76-3.428h9.144zm-.51 10.857H2.796c.66-1.723 1.848-2.947 3.035-3.429h2.054c1.187.482 2.375 1.706 3.036 3.429z" fill="#fff"/></svg><svg fill="none" viewBox="0 0 17 19" id="triangle" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.852 8.53c.739.435.739 1.505 0 1.94L2.195 18.503c-.75.44-1.695-.1-1.695-.97V1.467c0-.87.945-1.41 1.695-.97L15.852 8.53z" fill="#F90"/></svg></defs></svg>
     <header class="b-header">
       <div class="b-header__container container-xl"><a class="b-header__logo" href="#"><img src="images/logo.svg" alt></a>
+        <button class="b-header__toggle toggle">
+          <div class="toggle__inner"></div>
+        </button>
         <div class="b-header__inner">
           <ul class="b-header__menu">
             <li class="b-header__menu-item"><a class="b-header__menu-link" href="#">Product</a></li>
@@ -35,14 +38,124 @@
       </div>
     </header>
     <main>
+      <section class="b-hero">
+        <div class="container-xl">
+          <div class="row">
+            <div class="b-hero__content col-md-6">
+              <h2 class="b-hero__title">The Design Thinking superpowers</h2>
+              <p class="b-hero__descr">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
+              <div class="b-hero__buttons"><a class="btn btn--primary" href="#">Get Started</a>
+                <button class="btn btn--link btn--has-icon">
+                  <svg width="20" height="17">
+                    <use xlink:href="#triangle"></use>
+                  </svg>Watch the video
+                </button>
+              </div>
+            </div><img class="b-hero__image col-md-6" src="images/hero.png">
+          </div>
+        </div>
+      </section>
+      <section class="b-section b-section--tests">
+        <div class="container-xl">
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <h2 class="b-section__title text-center">We design tools to unveil your superpowers  </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="b-test col-lg-3 col-md-4">
+              <div class="b-test__icon b-icon b-icon--purple">
+                <div class="b-icon__inner">
+                  <svg width="12" height="18">
+                    <use xlink:href="#cursor"></use>
+                  </svg>
+                </div>
+              </div>
+              <h5 class="b-test__title">First click tests</h5>
+              <p class="b-test__descr">While most people enjoy casino gambling</p>
+            </div>
+            <div class="b-test col-lg-3 col-md-4">
+              <div class="b-test__icon b-icon b-icon--yellow">
+                <div class="b-icon__inner">
+                  <svg width="18" height="18">
+                    <use xlink:href="#link"></use>
+                  </svg>
+                </div>
+              </div>
+              <h5 class="b-test__title">Design surveys</h5>
+              <p class="b-test__descr">Sports betting, lottery and bingo playing for the fun</p>
+            </div>
+            <div class="b-test col-lg-3 col-md-4">
+              <div class="b-test__icon b-icon b-icon--red">
+                <div class="b-icon__inner">
+                  <svg width="18" height="18">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </div>
+              </div>
+              <h5 class="b-test__title">Preference tests</h5>
+              <p class="b-test__descr">The Myspace page defines the individual.</p>
+            </div>
+            <div class="b-test col-lg-3 col-md-4">
+              <div class="b-test__icon b-icon b-icon--blue">
+                <div class="b-icon__inner">
+                  <svg width="18" height="18">
+                    <use xlink:href="#sandwatches"></use>
+                  </svg>
+                </div>
+              </div>
+              <h5 class="b-test__title">Five second tests</h5>
+              <p class="b-test__descr">Personal choices and the overall personality of the person. </p>
+            </div>
+          </div>
+          <div class="d-flex"><a class="btn btn--primary mx-auto" href="#">
+              SIGN UP NOW
+              </a></div>
+        </div>
+      </section>
+      <section class="b-section">
+        <div class="container-xl">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="b-section__title">Design Professionals</h2>
+              <p class="section__descr">The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <div class="container-xl">
-      <div class="b-footer">
-        <div class="row">
-          <div class="b-footer__col col-md-3"><a class="b-footer__logo" href="#"><img src="/images/logo.svg" alt></a></div>
-          <div class="b-footer__col col-md-2"></div>
+      <footer class="b-footer">
+        <div class="b-footer__top row">
+          <div class="b-footer__col col-auto"><a class="b-footer__logo" href="#"><img src="/images/logo.svg" alt></a></div>
+          <div class="b-footer__col col-lg-2 col-md-3">
+            <div class="b-footer__title">Quick Links</div>
+            <ul class="b-footer__nav">
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">About Us</a></li>
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">Blog</a></li>
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">Contact</a></li>
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="b-footer__col col-lg-2 col-md-3">
+            <div class="b-footer__title">Legal Stuff</div>
+            <ul class="b-footer__nav">
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">Disclaimer</a></li>
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">Financing</a></li>
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">Privacy Policy</a></li>
+              <li class="b-footer__nav-item"><a class="b-footer__nav-link">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-md-12 d-lg-none d-md-block d-none"></div>
+          <div class="b-footer__col col-lg-4 mb-0">
+            <div class="b-footer__title">knowing you're always on  the best energy deal. </div>
+            <form class="b-footer__phone-form" action="/submit-phone" method="get">
+              <input class="b-footer__phone-input" type="tel" placeholder="Enter your phone Number" name="phone">
+              <button class="b-footer__phone-submit btn btn--primary" type="submit">Sign Up Now</button>
+            </form>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
     <script src="js/app.js"></script>
   </body>
