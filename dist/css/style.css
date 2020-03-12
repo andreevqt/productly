@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 30px;
 }
 
 abbr[title],
@@ -4647,7 +4647,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 5px;
 }
 
-.b-header__menu, .b-footer__nav {
+.product-list, .b-header__menu, .b-footer__nav {
   display: flex;
   padding-left: 0;
   margin-bottom: 0;
@@ -4845,18 +4845,16 @@ a.text-dark:hover, a.text-dark:focus {
 
 .b-section {
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
-.b-section__title {
-  margin-bottom: 22px;
+.b-section__image {
+  width: 100%;
+  height: auto;
 }
 
-@media (min-width: 768px) {
-  .b-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+.b-section__title, .b-section__desc {
+  margin-bottom: 30px;
 }
 
 .b-section--tests {
@@ -4868,6 +4866,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 .b-section--tests .b-section__title {
   margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .b-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .b-hero__title {
