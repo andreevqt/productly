@@ -55,7 +55,7 @@
   }
 
   &__menu {
-    @extend %list;
+    @extend %list; 
     flex-direction: column;
     color: #2f281e;
     padding-top: 30px;

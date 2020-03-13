@@ -9,11 +9,11 @@ block content
       .row
         .b-hero__content.col-md-6
           h2.b-hero__title.
-            The Design Thinking superpowers
+            The Design Thinking superpowers   
           p.b-hero__descr.
             Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.
           .b-hero__buttons
-            a.btn.btn--primary.d-block.d-md-inline-block(href="#")
+            a.btn.btn--primary.d-block.d-md-inline-block(href="#").
               Get Started
             a.btn.btn--link.btn--has-icon.d-block.d-md-inline-block(href="#")
               +use("#triangle", 20, 17)
@@ -62,12 +62,12 @@ block content
       .d-flex
         a.btn.btn--primary.mx-auto(href="#").
           SIGN UP NOW
-  
+     
   section.b-section.pb-0
     .container-xl
       .row
-        .b-section__content.col-md-6
-          span(style="display: inline-block; margin-top: 25px;").
+        .b-section__content.col-md-6   
+          span.b-section__title-before.
             Effortless Validation for
           h2.b-section__title.
             Design Professionals
@@ -85,25 +85,66 @@ block content
             Custom Design designers
           p.
             If you are looking for a new way to promote your business that won’t cost you more money
-        .col-md-6
-          img.b-section__image(src="images/design.png", alt)
+        .col
+          img.b-section__image(src="images/design.svg", alt)
 
-  section.b-section
+  section.b-section.pb-0
     .container-xl
       .row
         .col-md-6
-        .b-section__content.col-md-6
-          span(style="display: inline-block; margin-top: 25px;").
+          img.b-section__image(src="images/pm.svg", alt)
+        .b-section__content.col.pl-md-5
+          span.b-section__title-before.
             Easier decision making for
           h2.b-section__title.
             Product Managers
           p.
             The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. 
+          ul.b-product-list
+            li.b-product-list__item.
+              Never worry about overpaying for your energy again. 
+            li.b-product-list__item.
+              We will only switch you to energy companies that we trust and will treat you right
+            li.b-product-list__item.
+              We track the markets daily and know where the savings are.
 
+  section.b-section
+    .container-xl
+      .row
+        .b-section__content.col-md-6   
+          span.b-section__title-before.
+            Optimisation for
+          h2.b-section__title.
+            Marketers
+          p.
+            Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. 
+          h6.
+            Accessory makers
+          p.
+            While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun
+          h6.
+            Alterationists
+          p.
+            If you are looking for a new way to promote your business that won’t cost you more money
+          h6.
+            Custom Design designers
+          p.
+            If you are looking for a new way to promote your business that won’t cost you more money
+        .col
+          img.b-section__image(src="images/marketers.svg", alt)
 
-
-      
-
+  section.b-section.b-section--team
+    .container-xl
+      .row
+        .col-md-6.mx-auto.text-center
+          h2.b-section__title.text-center.
+            Need a super hero?
+          p.b-section__description.text-center.
+            Do you require some help for your project: Conception workshop,
+            prototyping, marketing strategy, landing page, UI/UX?
+          a.btn.btn--primary(href="#").
+            Contact our expert
+          
 
 
 

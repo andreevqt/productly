@@ -20,9 +20,24 @@
   }
 }
 
-.product-list {
+.b-product-list {
   @extend %list;
+  flex-direction: column;
   &__item {
-    
+    position: relative;
+    padding-left: 75px;
+    margin-bottom: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url("../images/checkbox.svg");
+    }
   }
 }
