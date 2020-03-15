@@ -5,6 +5,11 @@
   list-style: none;
 }
 
+
+button:focus {
+  outline: none;
+}
+
 #svgSprite {
   width: 0;
   height: 0;

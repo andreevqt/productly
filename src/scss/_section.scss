@@ -18,27 +18,74 @@
     margin-top: 25px;
   }
 
+  &__oval {
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+
+    @include media-breakpoint-up(md) {
+      height: 145px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    &--bottom {
+      top: 145px;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(#fff3e9, 1), rgba(#fff1e7, 0));
+    }
+
+    &--top {
+      top: 0;
+      bottom: 145px;
+      background: linear-gradient(to top, rgba(#fff7f1, 1), rgba(#fff1e7, 0));
+    }
+  }
+
   @include media-breakpoint-up(md) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
   &--tests {
+    position: relative;
+    #{$parent}__oval {
+      bottom: 0;
+    }
     #{$parent}__title {
       margin-bottom: 50px;
     }
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-image: url("../images/bg.png");
   }
 
   &--team {
-    background-size: 120%;
-    background-position: top;
-    background-image: url("../images/bg-oval.png");
+    position: relative;
+    #{$parent}__oval {
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    #{$parent}__container {
+      position: relative;
+    }
     @include media-breakpoint-up(md) {
       padding-top: 200px;
+      min-height: 850px;
+    }
+  }
+
+  &--news {
+    #{$parent}__title {
+      margin-bottom: 10px;
+    }
+    #{$parent}__desc {
+      margin-bottom: 55px;
     }
   }
 }
