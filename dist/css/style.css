@@ -5429,3 +5429,60 @@ button:focus {
 .news-slider .slick-dots .slick-active button {
   background-color: #ff9900;
 }
+
+.calculator-panel {
+  padding: 30px;
+  box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+  border-radius: 5px;
+}
+
+.calculator-panel__title {
+  margin-bottom: 20px;
+}
+
+.calculator-panel__title, .calculator-panel__money {
+  text-align: center;
+}
+
+.calculator-panel__money {
+  position: relative;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.calculator-panel__money-dollar {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: -15px;
+  position: absolute;
+  top: 8px;
+}
+
+.calculator-panel__addons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7.5px;
+}
+
+.calculator-panel__money-period {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.calculator-addon {
+  border: 1px solid #bcd0e5;
+  border-radius: 5px;
+  flex: 1 0 auto;
+  max-width: 50%;
+  padding: 15px 10px;
+  margin: 7.5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.calculator-addon--selected {
+  background-color: #fffbf5;
+  border-color: #ff9900;
+}

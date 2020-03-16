@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -37,6 +38,8 @@
     "gulp.spritesmith": "^6.11.0",
     "merge-stream": "^2.0.0",
     "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "through2": "^3.0.1",
     "vinyl-buffer": "^1.0.1",
     "webpack-stream": "^5.2.1"

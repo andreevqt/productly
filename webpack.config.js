@@ -3,6 +3,7 @@ const path = require("path");
 module.exports = {
   entry:{
     app: "./src/js/app.js",
+    calculator: "./src/js/calculator/calculator.js"
   },
   module: {
     rules: [
