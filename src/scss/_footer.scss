@@ -30,12 +30,15 @@
   }
 
   &__title {
-    columns: $headings-color;
+    color: $headings-color;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 35px;
+    }
   }
 
   &__phone-input {

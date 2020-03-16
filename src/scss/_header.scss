@@ -44,9 +44,8 @@
   }
 
   &__buttons {
-    margin: 30px auto 0 auto;
-
-    button:first-of-type {
+    margin: 40px auto 0 auto;
+    a:first-of-type {
       margin-right: 15px;
     }
     @include media-breakpoint-up(lg) {
@@ -58,7 +57,8 @@
     @extend %list; 
     flex-direction: column;
     color: #2f281e;
-    padding-top: 30px;
+    padding-top: 40px;
+    align-items: center;
     @include media-breakpoint-up(lg) {
       flex-direction: row;
       padding-top: 0;
@@ -73,7 +73,7 @@
     display: block;
     padding: 10px 15px;
     color: $color;
-    border-bottom: 1px solid $border-color;
+    /* border-bottom: 1px solid $border-color; */
 
     &--active,
     &:hover {

@@ -1,6 +1,6 @@
 .b-hero {
   padding-top: 30px;
-  
+
   &__title {
     font-size: 30px;
     line-height: 1.2;
@@ -11,6 +11,7 @@
   }
 
   &__content {
+    padding-top: 20px;
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
@@ -27,8 +28,14 @@
   }
 
   &__buttons {
-    button:first-of-type {
-      margin-right: 15px;
+    margin-bottom: 15px;
+
+    a:first-of-type {
+      margin-bottom: 15px;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+        margin-right: 15px;
+      }
     }
   }
 
