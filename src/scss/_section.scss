@@ -25,6 +25,15 @@
     z-index: -1;
     left: 0;
     right: 0;
+    height: 60px;
+
+    &--bottom {
+      bottom: 0;
+    }
+
+    &--top {
+      top: 0;
+    }
 
     @include media-breakpoint-up(md) {
       height: 145px;
@@ -35,17 +44,24 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: -1;
 
     &--bottom {
-      top: 145px;
+      top: 60px;
       bottom: 0;
-      background: linear-gradient(to bottom, rgba(#fff3e9, 1), rgba(#fff1e7, 0));
+      background: linear-gradient(to bottom, rgba(#fff3e9, 1), rgba(#fff3e9, 0));
+      @include media-breakpoint-up(md) {
+        top: 145px;
+      }
     }
 
     &--top {
       top: 0;
-      bottom: 145px;
-      background: linear-gradient(to top, rgba(#fff7f1, 1), rgba(#fff1e7, 0));
+      bottom: 60px;
+      background: linear-gradient(to top, rgba(#fff7f1, 1), rgba(#fff7f1, 0));
+      @include media-breakpoint-up(md) {
+        bottom: 145px;
+      }
     }
   }
 
@@ -56,9 +72,7 @@
 
   &--tests {
     position: relative;
-    #{$parent}__oval {
-      bottom: 0;
-    }
+
     #{$parent}__title {
       margin-bottom: 50px;
     }
@@ -66,14 +80,11 @@
 
   &--team {
     position: relative;
-    #{$parent}__oval {
-      top: 0;
-      left: 0;
-      right: 0;
-    }
+
     #{$parent}__container {
       position: relative;
     }
+
     @include media-breakpoint-up(md) {
       padding-top: 200px;
       min-height: 850px;
@@ -84,6 +95,7 @@
     #{$parent}__title {
       margin-bottom: 10px;
     }
+
     #{$parent}__desc {
       margin-bottom: 55px;
     }

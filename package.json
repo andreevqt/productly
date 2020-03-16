@@ -10,7 +10,8 @@
     "images": "gulp images",
     "sprites": "gulp sprites",
     "zip": "gulp zip",
-    "watch": "gulp watch --mode=development"
+    "watch": "gulp watch --mode=development",
+    "deploy": "gulp build --mode=production && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",

@@ -1,12 +1,16 @@
 .b-hero {
   padding-top: 30px;
+  
   &__title {
-    font-size: 44px;
-    line-height: 54px;
+    font-size: 30px;
+    line-height: 1.2;
     margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+      font-size: 44px;
+    }
   }
+
   &__content {
-    padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
@@ -16,16 +20,19 @@
       padding-bottom: 0;
     }
   }
+
   &__image {
     width: 100%;
     height: auto;
   }
+
   &__buttons {
     button:first-of-type {
       margin-right: 15px;
     }
-  } 
-  &__descr {
+  }
+
+  &__desc {
     margin-bottom: 45px;
     @include media-breakpoint-up(md) {
       width: 80%;

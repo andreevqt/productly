@@ -39,37 +39,37 @@
 
   &--purple {
     &::before {
-      background-color: #7752be;
+      background-color: $purple;
     }
     #{$parent}__inner {
-      background-color: #7752be;
+      background-color: $purple;
     }
   }
 
   &--yellow {
     &::before {
-      background-color: #fab005;
+      background-color: $yellow;
     }
     #{$parent}__inner {
-      background-color: #fab005;
+      background-color: $yellow;
     }
   }
 
   &--red {
     &::before {
-      background-color: #f03e3d;
+      background-color: $red;
     }
     #{$parent}__inner {
-      background-color: #f03e3d;
+      background-color: $red;
     }
   }
 
   &--blue {
     &::before {
-      background-color: #4dadf7;
+      background-color: $blue;
     }
     #{$parent}__inner {
-      background-color: #4dadf7;
+      background-color: $blue;
     }
   }
 }

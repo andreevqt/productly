@@ -1,14 +1,18 @@
 .b-test {
   margin-bottom: 40px;
+  
   &__icon {
     margin-bottom: 30px;
   }
+
   &__title {
     font-weight: 600;
     margin-bottom: 50px;
     margin-bottom: 13px;
   }
+
   &__descr {
+    margin-bottom: 0;
     font-weight: 500;
   }
 }
