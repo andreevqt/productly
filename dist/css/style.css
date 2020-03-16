@@ -4919,6 +4919,11 @@ button:focus {
 .b-footer__nav-link {
   display: inline-block;
   line-height: 2.26;
+  color: inherit;
+}
+
+.b-footer__nav-link:hover {
+  color: #ff9900;
 }
 
 .b-footer__title {

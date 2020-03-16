@@ -23,6 +23,10 @@
   &__nav-link {
     display: inline-block;
     line-height: 2.26;
+    color: inherit;
+    &:hover {
+      color: $primary;
+    }
   }
 
   &__title {
