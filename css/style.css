@@ -4845,10 +4845,10 @@ button:focus {
 }
 
 .b-header__buttons {
-  margin: 30px auto 0 auto;
+  margin: 40px auto 0 auto;
 }
 
-.b-header__buttons button:first-of-type {
+.b-header__buttons a:first-of-type {
   margin-right: 15px;
 }
 
@@ -4861,7 +4861,8 @@ button:focus {
 .b-header__menu {
   flex-direction: column;
   color: #2f281e;
-  padding-top: 30px;
+  padding-top: 40px;
+  align-items: center;
 }
 
 @media (min-width: 992px) {
@@ -4875,7 +4876,7 @@ button:focus {
   display: block;
   padding: 10px 15px;
   color: #2f281e;
-  border-bottom: 1px solid #bcd0e5;
+  /* border-bottom: 1px solid $border-color; */
 }
 
 .b-header__menu-link--active, .b-header__menu-link:hover {
@@ -4927,13 +4928,18 @@ button:focus {
 }
 
 .b-footer__title {
-  -moz-columns: #2f281e;
-  columns: #2f281e;
+  color: #2f281e;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .b-footer__title {
+    margin-bottom: 35px;
+  }
 }
 
 .b-footer__phone-input {
@@ -5001,7 +5007,7 @@ button:focus {
   z-index: -1;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 30px;
 }
 
 .b-section__oval--bottom {
@@ -5026,7 +5032,7 @@ button:focus {
 }
 
 .b-section__bg--bottom {
-  top: 60px;
+  top: 30px;
   bottom: 0;
   background: linear-gradient(to bottom, #fff3e9, rgba(255, 243, 233, 0));
 }
@@ -5039,7 +5045,7 @@ button:focus {
 
 .b-section__bg--top {
   top: 0;
-  bottom: 60px;
+  bottom: 30px;
   background: linear-gradient(to top, #fff7f1, rgba(255, 247, 241, 0));
 }
 
@@ -5104,6 +5110,7 @@ button:focus {
 }
 
 .b-hero__content {
+  padding-top: 20px;
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
@@ -5122,8 +5129,19 @@ button:focus {
   height: auto;
 }
 
-.b-hero__buttons button:first-of-type {
-  margin-right: 15px;
+.b-hero__buttons {
+  margin-bottom: 15px;
+}
+
+.b-hero__buttons a:first-of-type {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .b-hero__buttons a:first-of-type {
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
 }
 
 .b-hero__desc {
@@ -5235,11 +5253,18 @@ button:focus {
 
 .b-team__cloud {
   position: relative;
-  background-color: #fff;
-  display: inline-block;
-  padding: 14px 20px;
-  border-radius: 26px;
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+}
+
+.b-team__cloud, .b-team__cloud-inner {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 26px;
+}
+
+.b-team__cloud-inner {
+  padding: 14px 20px;
 }
 
 .b-team__cloud::before, .b-team__cloud::after {
@@ -5247,6 +5272,7 @@ button:focus {
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
+  box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
 }
 
 .b-team__cloud::before {
