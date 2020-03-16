@@ -28677,26 +28677,42 @@ var App = function App() {
       perMonth = _useState6[0],
       setPerMonth = _useState6[1];
 
-  var calcPrice = function calcPrice() {
-    var flow = addons.flow,
-        events = addons.events;
-    var additionalPrice = 0;
-
-    if (flow) {
-      additionalPrice += 50;
-    } else if (perMonth > 100) {
-      additionalPrice -= 50;
-    }
-
-    if (events) {
-      additionalPrice += 15;
-    } else if (perMonth + additionalPrice > 100) {
-      additionalPrice -= 15;
-    }
-
-    setPerMonth(perMonth + additionalPrice);
+  var usePrevious = function usePrevious(value) {
+    var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+      ref.current = value;
+    });
+    return ref.current;
   };
 
+  var prevAddons = usePrevious(addons);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!prevAddons) {
+      return;
+    }
+
+    var flow = addons.flow,
+        events = addons.events;
+    var totalPrice = perMonth;
+
+    if (flow !== prevAddons.flow) {
+      if (flow) {
+        totalPrice += 50;
+      } else if (prevAddons.flow) {
+        totalPrice -= 50;
+      }
+    }
+
+    if (events !== prevAddons.events) {
+      if (events) {
+        totalPrice += 15;
+      } else if (prevAddons.events) {
+        totalPrice -= 15;
+      }
+    }
+
+    setPerMonth(totalPrice);
+  }, [addons]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 "
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -28715,14 +28731,12 @@ var App = function App() {
     label: "Flows",
     value: "flow",
     addons: addons,
-    setAddons: setAddons,
-    onChange: calcPrice
+    setAddons: setAddons
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Addon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Events",
     value: "events",
     addons: addons,
-    setAddons: setAddons,
-    onChange: calcPrice
+    setAddons: setAddons
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -28786,13 +28800,7 @@ var Addon = function Addon(_ref) {
   var label = _ref.label,
       value = _ref.value,
       addons = _ref.addons,
-      setAddons = _ref.setAddons,
-      onChange = _ref.onChange;
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (onChange) {
-      onChange(addons.value);
-    }
-  }, [addons]);
+      setAddons = _ref.setAddons;
 
   var onClick = function onClick(e) {
     setAddons(_objectSpread({}, addons, _defineProperty({}, value, !addons[value])));

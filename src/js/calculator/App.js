@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Addon from "./components/Addon";
 
 const App = () => {
@@ -6,24 +6,43 @@ const App = () => {
   const [addons, setAddons] = useState({ flow: false, events: false });
   const [perMonth, setPerMonth] = useState(100);
 
-  const calcPrice = () => {
-    const { flow, events } = addons;
-    let additionalPrice = 0
 
-    if (flow) {
-      additionalPrice += 50;
-    } else if (perMonth  > 100) {
-      additionalPrice -= 50;
-    }
-
-    if (events) {
-      additionalPrice += 15;
-    } else if (perMonth + additionalPrice > 100) {
-      additionalPrice -= 15;
-    }
-
-    setPerMonth(perMonth + additionalPrice);
+  const usePrevious = (value) => {
+    const ref = useRef();
+    useEffect(() => {
+      ref.current = value;
+    });
+    return ref.current;
   }
+
+  const prevAddons = usePrevious(addons);
+
+  useEffect(() => {
+    if (!prevAddons) {
+      return;
+    }
+
+    const { flow, events } = addons;
+    let totalPrice = perMonth;
+
+    if (flow !== prevAddons.flow) {
+      if (flow) {
+        totalPrice += 50;
+      } else if (prevAddons.flow) {
+        totalPrice -= 50;
+      }
+    }
+
+    if (events !== prevAddons.events) {
+      if (events) {
+        totalPrice += 15;
+      } else if (prevAddons.events) {
+        totalPrice -= 15;
+      }
+    }
+
+    setPerMonth(totalPrice);
+  }, [addons])
 
   return (
     <>
@@ -40,14 +59,12 @@ const App = () => {
               value="flow"
               addons={addons}
               setAddons={setAddons}
-              onChange={calcPrice}
             />
             <Addon
               label="Events"
               value="events"
               addons={addons}
               setAddons={setAddons}
-              onChange={calcPrice}
             />
           </div>
         </div>

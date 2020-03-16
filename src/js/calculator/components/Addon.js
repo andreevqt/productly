@@ -5,14 +5,7 @@ const Addon = ({
   value,
   addons,
   setAddons,
-  onChange
 }) => {
-
-  useEffect(() => {
-    if (onChange) {
-      onChange(addons.value);
-    }
-  }, [addons])
 
   const onClick = (e) => {
     setAddons({ ...addons, [value]: !addons[value] });
