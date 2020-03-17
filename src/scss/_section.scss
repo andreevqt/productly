@@ -13,6 +13,12 @@
     margin-bottom: 30px;
   }
 
+  &__title {
+    &--mb-10 {
+      margin-bottom: 10px;
+    }
+  }
+
   &__title-before {
     display: inline-block;
     margin-top: 25px;
@@ -60,7 +66,7 @@
       top: 0;
       bottom: 30px;
       background: linear-gradient(to top, rgba(#fff7f1, 1), rgba(#fff7f1, 0));
-      
+
       @include media-breakpoint-up(md) {
         bottom: 145px;
       }
@@ -94,10 +100,6 @@
   }
 
   &--news {
-    #{$parent}__title {
-      margin-bottom: 10px;
-    }
-
     #{$parent}__desc {
       margin-bottom: 55px;
     }

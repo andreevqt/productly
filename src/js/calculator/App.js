@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Addon from "./components/Addon";
-import { Range, getTrackBackground } from "react-range";
+import Range from "./components/Range";
 
 const MIN_REVENUE = 0;
 const MAX_REVENUE = 200000;
@@ -32,7 +32,7 @@ const App = () => {
     setIncome(values);
 
     const toAdd = value * 0.03;
-    if (toAdd < 100) {
+    if (!toAdd) {
       setPerMonth(100);
       return;
     }
@@ -71,7 +71,6 @@ const App = () => {
     if (typeof num !== "number") {
       return undefined;
     }
-
     return num.toLocaleString(navigator.language, { minimumFractionDigits: 0, });
   }
 
@@ -81,7 +80,7 @@ const App = () => {
 
   return (
     <>
-      <div className="col-md-6 ">
+      <div className="col-md-6 mb-4 mb-md-0">
         <div className="calculator-panel">
           <div className="calculator-panel__title">What is you current monthly revenue?</div>
           <div className="calculator-panel__money">
@@ -94,50 +93,6 @@ const App = () => {
               max={MAX_REVENUE}
               values={income}
               onChange={onIncomeChange}
-              renderThumb={({ props }) => (
-                <div
-                  {...props}
-                  style={{
-                    ...props.style,
-                    height: '30px',
-                    width: '30px',
-                    backgroundColor: "#fff",
-                    borderRadius: '50%',
-                    boxShadow: "0px 0px 11px rgba(23, 58, 86, 0.6)",
-                    border: "2px solid #ff9900",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
-                >
-                  <svg width="6px" height="6px" style={{ marginRight: "4px" }}>
-                    <use xlinkHref="#arrow-left" />
-                  </svg>
-                  <svg width="6px" height="6px">
-                    <use xlinkHref="#arrow-right" />
-                  </svg>
-                </div>
-              )}
-              renderTrack={({ props, children }) => (
-                <div
-                  {...props}
-                  style={{
-                    ...props.style,
-                    height: '8px',
-                    width: '100%',
-                    backgroundColor: "#ff9900",
-                    borderRadius: "100px",
-                    background: getTrackBackground({
-                      values: income,
-                      colors: ["#ff9900", "#bcd0e560"],
-                      min: MIN_REVENUE,
-                      max: MAX_REVENUE
-                    })
-                  }}
-                >
-                  {children}
-                </div>
-              )}
             />
           </div>
           <div className="calculator-panel__title">Add-ons (optional)</div>

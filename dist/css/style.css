@@ -5006,6 +5006,10 @@ button:focus {
   margin-bottom: 30px;
 }
 
+.b-section__title--mb-10 {
+  margin-bottom: 10px;
+}
+
 .b-section__title-before {
   display: inline-block;
   margin-top: 25px;
@@ -5094,10 +5098,6 @@ button:focus {
     padding-top: 200px;
     min-height: 700px;
   }
-}
-
-.b-section--news .b-section__title {
-  margin-bottom: 10px;
 }
 
 .b-section--news .b-section__desc {
