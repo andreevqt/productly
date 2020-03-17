@@ -1,7 +1,9 @@
 .calculator-panel {
-  padding: 30px;
+  padding: 40px 40px;
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   border-radius: 5px;
+  height: 100%;
+
   &__title {
     margin-bottom: 20px;
   }
@@ -12,10 +14,13 @@
 
   &__money {
     position: relative;
-    font-size: 70px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    @include media-breakpoint-up(md) {
+      font-size: 70px;
+    }
   }
 
   &__money-dollar {
@@ -29,16 +34,36 @@
   &__addons {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -7.5px;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+    margin-bottom: 20px;
   }
 
   &__money-period {
     display: inline-block;
     font-size: 16px;
   }
+
+  &__range-container {
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a:first-of-type {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .calculator-addon {
+  $parent: &;
+  position: relative;
   border: 1px solid $border-color;
   border-radius: 5px;
   flex: 1 0 auto;
@@ -48,8 +73,21 @@
   font-weight: 500;
   cursor: pointer;
 
+  &__icon {
+    $size: 20px;
+    width: $size;
+    height: $size;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - #{$size / 2});
+    fill: $border-color;
+  }
+
   &--selected {
     background-color: lighten($primary, 48%);
     border-color: $primary;
+    #{$parent}__icon {
+      fill: $primary;
+    }
   }
 }

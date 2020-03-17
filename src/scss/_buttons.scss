@@ -41,12 +41,23 @@
 
   &--link {
     @include make-button($bg: transparent, $color: $primary, $border-color: transparent);
-    text-decoration: underline;
   }
 
   &--has-icon {
     svg {
       margin-right: 5px;
     }
+  }
+
+  &--has-underline {
+    text-decoration: underline;
+  }
+
+  &--lg {
+    padding: 15px 35px;
+  }
+
+  &--rounded {
+    border-radius: 100px;
   }
 }

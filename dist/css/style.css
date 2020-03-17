@@ -4584,7 +4584,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #bcd0e5 !important;
 }
 
 .text-black-50 {
@@ -4733,7 +4733,6 @@ a.text-dark:hover, a.text-dark:focus {
   color: #ff9900;
   border-color: transparent;
   background-color: transparent;
-  text-decoration: underline;
 }
 
 .btn--link:hover {
@@ -4744,6 +4743,18 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn--has-icon svg {
   margin-right: 5px;
+}
+
+.btn--has-underline {
+  text-decoration: underline;
+}
+
+.btn--lg {
+  padding: 15px 35px;
+}
+
+.btn--rounded {
+  border-radius: 100px;
 }
 
 .b-product-list, .b-header__menu, .b-footer__nav, .news-slider .slick-dots {
@@ -5081,7 +5092,7 @@ button:focus {
 @media (min-width: 768px) {
   .b-section--team {
     padding-top: 200px;
-    min-height: 850px;
+    min-height: 700px;
   }
 }
 
@@ -5431,9 +5442,10 @@ button:focus {
 }
 
 .calculator-panel {
-  padding: 30px;
+  padding: 40px 40px;
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   border-radius: 5px;
+  height: 100%;
 }
 
 .calculator-panel__title {
@@ -5446,10 +5458,16 @@ button:focus {
 
 .calculator-panel__money {
   position: relative;
-  font-size: 70px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .calculator-panel__money {
+    font-size: 70px;
+  }
 }
 
 .calculator-panel__money-dollar {
@@ -5463,7 +5481,9 @@ button:focus {
 .calculator-panel__addons {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -7.5px;
+  margin-left: -7.5px;
+  margin-right: -7.5px;
+  margin-bottom: 20px;
 }
 
 .calculator-panel__money-period {
@@ -5471,7 +5491,24 @@ button:focus {
   font-size: 16px;
 }
 
+.calculator-panel__range-container {
+  margin-bottom: 30px;
+}
+
+.calculator-panel__buttons {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator-panel__buttons a:first-of-type {
+  margin-bottom: 15px;
+}
+
 .calculator-addon {
+  position: relative;
   border: 1px solid #bcd0e5;
   border-radius: 5px;
   flex: 1 0 auto;
@@ -5482,7 +5519,20 @@ button:focus {
   cursor: pointer;
 }
 
+.calculator-addon__icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 10px);
+  fill: #bcd0e5;
+}
+
 .calculator-addon--selected {
   background-color: #fffbf5;
   border-color: #ff9900;
+}
+
+.calculator-addon--selected .calculator-addon__icon {
+  fill: #ff9900;
 }

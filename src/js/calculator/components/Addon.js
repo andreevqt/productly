@@ -15,12 +15,16 @@ const Addon = ({
   if (addons[value]) {
     classes.push("calculator-addon--selected");
   }
+  const iconClass = "calculator-addon__icon";
 
   return (
     <div
       className={classes.join(" ")}
       onClick={onClick}>
       {label}
+      <svg className={iconClass}>
+        <use xlinkHref="#checkbox"></use>
+      </svg>
     </div>);
 };
 
