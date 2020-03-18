@@ -5,12 +5,13 @@ import Range from "./components/Range";
 const MIN_REVENUE = 0;
 const MAX_REVENUE = 200000;
 const STEP = 1000;
+const INITIAL_PRICE = 100;
 
 const App = () => {
   const [income, setIncome] = useState([0]);
   const [addons, setAddons] = useState({ flow: false, events: false });
   const [addonsPrice, setAddonsPrice] = useState(0);
-  const [perMonth, setPerMonth] = useState(100);
+  const [perMonth, setPerMonth] = useState(INITIAL_PRICE);
 
   const usePrevious = (value) => {
     const ref = useRef();
@@ -31,9 +32,9 @@ const App = () => {
 
     setIncome(values);
 
-    const toAdd = value * 0.03;
+    const toAdd = INITIAL_PRICE + value * 0.03;
     if (!toAdd) {
-      setPerMonth(100);
+      setPerMonth(INITIAL_PRICE);
       return;
     }
 
