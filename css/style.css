@@ -5452,11 +5452,11 @@ button:focus {
   margin-bottom: 20px;
 }
 
-.calculator-panel__title, .calculator-panel__money {
+.calculator-panel__title, .calculator-panel__currency {
   text-align: center;
 }
 
-.calculator-panel__money {
+.calculator-panel__currency {
   position: relative;
   font-size: 30px;
   font-weight: 700;
@@ -5465,12 +5465,12 @@ button:focus {
 }
 
 @media (min-width: 768px) {
-  .calculator-panel__money {
+  .calculator-panel__currency {
     font-size: 70px;
   }
 }
 
-.calculator-panel__money-dollar {
+.calculator-panel__currency-sign {
   display: inline-block;
   font-size: 16px;
   margin-left: -15px;
@@ -5486,7 +5486,7 @@ button:focus {
   margin-bottom: 20px;
 }
 
-.calculator-panel__money-period {
+.calculator-panel__currency-period {
   display: inline-block;
   font-size: 16px;
 }
