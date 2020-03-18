@@ -8,11 +8,11 @@
     margin-bottom: 20px;
   }
   &__title,
-  &__money {
+  &__currency {
     text-align: center;
   }
 
-  &__money {
+  &__currency {
     position: relative;
     font-size: 30px;
     font-weight: 700;
@@ -23,7 +23,7 @@
     }
   }
 
-  &__money-dollar {
+  &__currency-sign {
     display: inline-block;
     font-size: 16px;
     margin-left: -15px;
@@ -39,7 +39,7 @@
     margin-bottom: 20px;
   }
 
-  &__money-period {
+  &__currency-period {
     display: inline-block;
     font-size: 16px;
   }

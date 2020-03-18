@@ -84,8 +84,8 @@ const App = () => {
       <div className="col-md-6 mb-4 mb-md-0">
         <div className="calculator-panel">
           <div className="calculator-panel__title">What is you current monthly revenue?</div>
-          <div className="calculator-panel__money">
-            <div className="calculator-panel__money-dollar">$</div>{formatNumber(income[0])}
+          <div className="calculator-panel__currency">
+            <div className="calculator-panel__currency-sign">$</div>{formatNumber(income[0])}
           </div>
           <div className="calculator-panel__range-container">
             <Range
@@ -119,10 +119,10 @@ const App = () => {
       <div className="col-md-6">
         <div className="calculator-panel">
           <div className="calculator-panel__title d-flex justify-content-center align-items-flex-end">Price <svg width="16" height="16" style={{ marginLeft: "8px", fill: "#ff9900" }}><use xlinkHref="#question" /></svg></div>
-          <div className="calculator-panel__money">
-            <div className="calculator-panel__money-dollar">$</div>
+          <div className="calculator-panel__currency">
+            <div className="calculator-panel__currency-sign">$</div>
             {formatNumber(perMonth + addonsPrice)}
-            <div className="calculator-panel__money-period">/ month</div>
+            <div className="calculator-panel__currency-period">/ month</div>
           </div>
           <div className="calculator-panel__buttons">
             <a href="#" className="btn btn--primary btn--lg btn--rounded mx-auto">Start free 14 day trial</a>
