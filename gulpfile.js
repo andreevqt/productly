@@ -20,6 +20,7 @@ const gulpZip = require("gulp-zip");
 const argv = require("yargs").argv;
 const fs = require("fs");
 const childProcess = require("child_process");
+const gulpWebp = require("gulp-webp");
 
 const config = {
   // destination folder
@@ -118,12 +119,20 @@ const images = () => {
   const filetypes = "{png,gif,jpg,jpeg,svg}";
   return merge(
     gulp
-      .src([`./images/**/*.${filetypes}`, "!./images/**/*.gitignore"])
+      .src(`./images/**/*.${filetypes}`)
       .pipe(gulp.dest(config.dist + "/images")),
-    gulp.
-      src(`*.${filetypes}`)
+    // favicon
+    gulp
+      .src(`*.${filetypes}`)
       .pipe(gulp.dest(config.dist))
   );
+}
+
+const webp  = () => {
+  return gulp
+    .src('./images/**/*.{png,jpg,jpeg}')
+    .pipe(gulpWebp())
+    .pipe(gulp.dest(config.dist  + "/images/webp"))
 }
 
 const vendor = () => {
@@ -249,7 +258,7 @@ const sprites = gulp.parallel(pngSprites, svgSprites);
 
 const build = gulp.series(
   clean,
-  gulp.parallel(vendor, images, sprites),
+  gulp.parallel(vendor, images, webp, sprites),
   gulp.parallel(css, js, html)
 );
 
@@ -264,6 +273,9 @@ exports.zip = zip;
 
 // images
 exports.images = images;
+
+// webp
+exports.webp = webp
 
 // sprites 
 exports.sprites = sprites;
