@@ -5135,7 +5135,8 @@ button:focus {
   }
 }
 
-.b-hero__image {
+.b-hero__image img,
+.b-hero__image source {
   width: 100%;
   height: auto;
 }
@@ -5387,9 +5388,14 @@ button:focus {
 }
 
 .news-slider__item-thumb {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.news-slider__item-thumb img,
+.news-slider__item-thumb source {
   width: 100%;
   height: auto;
-  margin-bottom: 25px;
 }
 
 .news-slider__item-meta {
