@@ -120,11 +120,11 @@ const images = () => {
   const filetypes = "{png,gif,jpg,jpeg,svg}";
   return merge(
     gulp
-      .src(`./images/**/*.${filetypes}`)
+      .src([`./images/**/*.${filetypes}`, `!./images/favicon`])
       .pipe(gulp.dest(config.dist + "/images")),
     // favicon
     gulp
-      .src(`*.${filetypes}`)
+      .src(`./images/favicon/*.${filetypes}`)
       .pipe(gulp.dest(config.dist))
   );
 }
