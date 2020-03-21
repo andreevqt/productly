@@ -12,8 +12,12 @@
   }
 
   &__item-thumb {
-    width: 100%;
-    height: auto;
+    img,
+    source {
+      width: 100%;
+      height: auto;
+    }
+    display: inline-block;
     margin-bottom: 25px;
   }
 

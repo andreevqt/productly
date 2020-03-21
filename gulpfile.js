@@ -21,6 +21,7 @@ const argv = require("yargs").argv;
 const fs = require("fs");
 const childProcess = require("child_process");
 const gulpWebp = require("gulp-webp");
+const { getImageType } = require("./src/js/util/util");
 
 const config = {
   // destination folder
@@ -128,11 +129,13 @@ const images = () => {
   );
 }
 
-const webp  = () => {
+const webp = () => {
   return gulp
     .src('./images/**/*.{png,jpg,jpeg}')
-    .pipe(gulpWebp())
-    .pipe(gulp.dest(config.dist  + "/images/webp"))
+    .pipe(gulpWebp({
+      quality: 100
+    }))
+    .pipe(gulp.dest(config.dist + "/images"))
 }
 
 const vendor = () => {
@@ -178,7 +181,8 @@ const html = () => {
     .pipe(pug({
       pretty: true,
       data: {
-        fs
+        fs,
+        getImageType
       }
     }))
     .pipe(gulp.dest(dest))
