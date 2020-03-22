@@ -7,5 +7,5 @@ npm install
 # build 
 npm run build
 # local dev
-npm run dev
+npm run watch
 ```
