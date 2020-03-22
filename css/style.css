@@ -5033,7 +5033,7 @@ button:focus {
   top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .b-section__oval {
     height: 145px;
   }
@@ -5052,7 +5052,7 @@ button:focus {
   background: linear-gradient(to bottom, #fff3e9, rgba(255, 243, 233, 0));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .b-section__bg--bottom {
     top: 145px;
   }
@@ -5064,7 +5064,7 @@ button:focus {
   background: linear-gradient(to top, #fff7f1, rgba(255, 247, 241, 0));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .b-section__bg--top {
     bottom: 145px;
   }
@@ -5120,12 +5120,23 @@ button:focus {
   }
 }
 
+.b-hero__title, .b-hero__desc {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .b-hero__title, .b-hero__desc {
+    text-align: left;
+  }
+}
+
 .b-hero__content {
   padding-top: 20px;
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -5135,10 +5146,34 @@ button:focus {
   }
 }
 
-.b-hero__image img,
-.b-hero__image source {
+@media (min-width: 992px) {
+  .b-hero__content {
+    align-items: flex-start;
+  }
+}
+
+.b-hero__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.b-hero__image img {
   width: 100%;
   height: auto;
+}
+
+@media (min-width: 576px) {
+  .b-hero__image img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .b-hero__image img {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 .b-hero__buttons {
@@ -5149,7 +5184,7 @@ button:focus {
   margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .b-hero__buttons a:first-of-type {
     margin-bottom: 0;
     margin-right: 15px;
@@ -5431,6 +5466,10 @@ button:focus {
   right: 0;
 }
 
+.news-slider .slick-dots li:last-of-type button {
+  margin-right: 0;
+}
+
 .news-slider .slick-dots button {
   display: inline-block;
   background-color: #efefef;
@@ -5448,7 +5487,7 @@ button:focus {
 }
 
 .calculator-panel {
-  padding: 40px 40px;
+  padding: 20px;
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   border-radius: 5px;
   height: 100%;
@@ -5511,6 +5550,12 @@ button:focus {
 
 .calculator-panel__buttons a:first-of-type {
   margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  .calculator-panel {
+    padding: 40px;
+  }
 }
 
 .calculator-addon {

@@ -34,19 +34,21 @@
     <main>
       <section class="b-hero">
         <div class="container-xl">
-          <div class="row">
-            <div class="b-hero__content col-md-6">
+          <div class="b-hero__row row">
+            <div class="b-hero__content col-lg-6">
               <h2 class="b-hero__title">The Design Thinking superpowers   </h2>
               <p class="b-hero__desc">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
-              <div class="b-hero__buttons"><a class="btn btn--primary d-block d-md-inline-block" href="#">Get Started</a><a class="btn btn--link btn--has-icon d-block d-md-inline-block" href="#">
+              <div class="b-hero__buttons"><a class="btn btn--primary d-block d-sm-inline-block" href="#">Get Started</a><a class="btn btn--link btn--has-icon d-block d-sm-inline-block" href="#">
                   <svg width="20" height="17">
                     <use xlink:href="#triangle"></use>
                   </svg>Watch the video</a></div>
             </div>
-            <picture class="b-hero__image col-md-6">
-              <source srcset="images/hero.webp" type="image/webp"/>
-              <source srcset="images/hero.png" type="image/png"/><img src="images/hero.png" alt="The Desing Thinking superpowers"/>
-            </picture>
+            <div class="col">
+              <picture class="b-hero__image">
+                <source srcset="images/hero.webp" type="image/webp"/>
+                <source srcset="images/hero.png" type="image/png"/><img src="images/hero.png" alt="The Desing Thinking superpowers"/>
+              </picture>
+            </div>
           </div>
         </div>
       </section>
