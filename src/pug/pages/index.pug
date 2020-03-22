@@ -9,19 +9,20 @@ block after_scripts
 block content 
   section.b-hero
     .container-xl
-      .row
-        .b-hero__content.col-md-6
+      .b-hero__row.row
+        .b-hero__content.col-lg-6
           h2.b-hero__title.
             The Design Thinking superpowers   
           p.b-hero__desc.
             Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.
           .b-hero__buttons
-            a.btn.btn--primary.d-block.d-md-inline-block(href="#").
+            a.btn.btn--primary.d-block.d-sm-inline-block(href="#").
               Get Started
-            a.btn.btn--link.btn--has-icon.d-block.d-md-inline-block(href="#")
+            a.btn.btn--link.btn--has-icon.d-block.d-sm-inline-block(href="#")
               +use("#triangle", 20, 17)
               | Watch the video
-        +webp("images/hero.webp", "images/hero.png", alt="The Desing Thinking superpowers")(class="b-hero__image col-md-6")
+        .col
+          +webp("images/hero.webp", "images/hero.png", alt="The Desing Thinking superpowers")(class="b-hero__image")
 
   section.b-section.b-section--tests
     .b-section__bg.b-section__bg--top
