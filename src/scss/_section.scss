@@ -4,8 +4,7 @@
   padding-bottom: 60px;
 
   &__image {
-    width: 100%;
-    height: auto;
+    @include make-responsive-picture();
   }
 
   &__title,

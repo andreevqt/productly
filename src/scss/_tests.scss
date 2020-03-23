@@ -1,5 +1,8 @@
 .b-test {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
   &__icon {
     margin-bottom: 30px;
@@ -14,5 +17,9 @@
   &__descr {
     margin-bottom: 0;
     font-weight: 500;
+  }
+
+  @include media-breakpoint-up(md) {
+    align-items: flex-start;
   }
 }

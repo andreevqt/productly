@@ -2,10 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import Addon from "./components/Addon";
 import Range from "./components/Range";
 
-const MIN_REVENUE = 0;
-const MAX_REVENUE = 200000;
-const STEP = 1000;
+const MIN_REVENUE   = 0;
+const MAX_REVENUE   = 200000;
+const STEP          = 1000;
 const INITIAL_PRICE = 100;
+const EVENT_PRICE  = 50;
+const FLOW_PRICE   = 15;
 
 const App = () => {
   const [income, setIncome] = useState([0]);
@@ -51,17 +53,17 @@ const App = () => {
 
     if (flow !== prevAddons.flow) {
       if (flow) {
-        totalPrice += 50;
+        totalPrice += FLOW_PRICE;
       } else if (prevAddons.flow) {
-        totalPrice -= 50;
+        totalPrice -= FLOW_PRICE;
       }
     }
 
     if (events !== prevAddons.events) {
       if (events) {
-        totalPrice += 15;
+        totalPrice += EVENT_PRICE;
       } else if (prevAddons.events) {
-        totalPrice -= 15;
+        totalPrice -= EVENT_PRICE;
       }
     }
 

@@ -1,6 +1,4 @@
 .b-hero {
-  padding-top: 30px;
-
   &__title {
     font-size: 30px;
     line-height: 1.2;
@@ -18,17 +16,17 @@
     }
   }
 
+  &__row {
+  }
+
   &__content {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include media-breakpoint-up(md) {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+
     @include media-breakpoint-up(lg) {
       align-items: flex-start;
     }
@@ -40,7 +38,6 @@
     margin-bottom: 30px;
     img {
       width: 100%;
-      height: auto;
 
       @include media-breakpoint-up(sm) {
         width: 50%;
@@ -48,8 +45,8 @@
 
       @include media-breakpoint-up(lg) {
         width: 100%;
-        margin-bottom: 0;
       }
+
     }
   }
 

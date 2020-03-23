@@ -40,9 +40,6 @@
     }
   }
 
-  &__logo img {
-  }
-
   &__buttons {
     margin: 40px auto 0 auto;
     a:first-of-type {
@@ -54,18 +51,16 @@
   }
 
   &__menu {
-    @extend %list; 
+    @extend %list;
     flex-direction: column;
     color: #2f281e;
     padding-top: 40px;
     align-items: center;
+
     @include media-breakpoint-up(lg) {
       flex-direction: row;
       padding-top: 0;
     }
-  }
-
-  &__menu-item {
   }
 
   &__menu-link {
@@ -73,7 +68,6 @@
     display: block;
     padding: 10px 15px;
     color: $color;
-    /* border-bottom: 1px solid $border-color; */
 
     &--active,
     &:hover {

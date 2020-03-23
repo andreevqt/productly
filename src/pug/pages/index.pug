@@ -8,7 +8,7 @@ block after_scripts
 
 block content 
   section.b-hero
-    .container-xl
+    .b-hero__container.container-xl
       .b-hero__row.row
         .b-hero__content.col-lg-6
           h2.b-hero__title.
@@ -22,11 +22,11 @@ block content
               +use("#triangle", 20, 17)
               | Watch the video
         .col
-          +webp("images/hero.webp", "images/hero.png", alt="The Desing Thinking superpowers")(class="b-hero__image")
+          +webp("images/hero.webp", "images/hero.png", alt="The Desing Thinking superpowers")(class="b-hero__image picture-responsive")
 
   section.b-section.b-section--tests
     .b-section__bg.b-section__bg--top
-    img.b-section__oval.b-section__oval--bottom(src="images/bottom-bg.png")
+    img.b-section__oval.b-section__oval--bottom.svg-responsive(src="images/bottom-bg.png")
     .container-xl
       .row
         .col-md-6.mx-auto
@@ -71,8 +71,8 @@ block content
 
   section.b-section.pb-0
     .container-xl
-      .row
-        .b-section__content.col-md-6   
+      .row.flex-md-row.flex-column-reverse
+        .b-section__content.col-md-6
           span.b-section__title-before.
             Effortless Validation for
           h2.b-section__title.
@@ -97,8 +97,8 @@ block content
   section.b-section.pb-0
     .container-xl
       .row
-        .col-md-6
-          img.b-section__image(src="images/pm.svg", alt)
+        .col-md-6.d-flex
+          img.b-section__image.ml-auto(src="images/pm.svg", alt)
         .b-section__content.col.pl-md-5
           span.b-section__title-before.
             Easier decision making for
@@ -116,7 +116,7 @@ block content
 
   section.b-section
     .container-xl
-      .row
+      .row.flex-md-row.flex-column-reverse
         .b-section__content.col-md-6   
           span.b-section__title-before.
             Optimisation for
@@ -136,7 +136,7 @@ block content
             Custom Design designers
           p.
             If you are looking for a new way to promote your business that won’t cost you more money
-        .col
+        .col.d-flex.ml-auto
           img.b-section__image(src="images/marketers.svg", alt)
 
   section.b-section.b-section--team.pb-0
@@ -194,21 +194,21 @@ block content
         Join 40,000+ other marketers and get proven strategies on email marketing
       .news-slider
         - for(let i = 0; i < 4; i++)
-            .news-slider__item
+            article.news-slider__item
               +webp("images/news-1.webp","images/news-1.png", alt="Increasing Prosperity With Positive Thinking")(class="news-slider__item-thumb")
               .news-slider__item-meta.
                 By <b>Abdullah</b> |  03 March 2019
               .news-slider__item-title.
                 Increasing Prosperity With Positive Thinking
               a.news-slider__link(href="#")
-            .news-slider__item
+            article.news-slider__item
               +webp("images/news-2.webp","images/news-2.png", alt="Motivation Is The First Step To Success")(class="news-slider__item-thumb")
               .news-slider__item-meta.
                 By <b>Abdullah</b> |  03 March 2019
               .news-slider__item-title.
                 Motivation Is The First Step To Success
               a.news-slider__link(href="#")
-            .news-slider__item
+            article.news-slider__item
               +webp("images/news-3.webp","images/news-3.png", alt="Success Steps For Your Personal Or Business Life")(class="news-slider__item-thumb")
               .news-slider__item-meta.
                 By <b>Abdullah</b> |  03 March 2019

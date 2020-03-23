@@ -33,9 +33,9 @@
 
   &__addons {
     display: flex;
-    flex-wrap: wrap;
-    margin-left: -7.5px;
-    margin-right: -7.5px;
+    flex-wrap: nowrap;
+    /* margin-left: -7.5px;
+    margin-right: -7.5px; */
     margin-bottom: 20px;
   }
 
@@ -69,13 +69,20 @@
   $parent: &;
   position: relative;
   border: 1px solid $border-color;
-  border-radius: 5px;
-  flex: 1 0 auto;
+  position: relative;
+  flex: 1 0 50%;
   max-width: 50%;
   padding: 15px 40px 15px 20px;
-  margin: 7.5px;
   font-weight: 500;
   cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: -1px;
+
+  &:first-child {
+    margin-left: 0;
+  }
 
   &__icon {
     $size: 20px;
@@ -88,6 +95,7 @@
   }
 
   &--selected {
+    z-index: 2;
     background-color: lighten($primary, 48%);
     border-color: $primary;
     #{$parent}__icon {

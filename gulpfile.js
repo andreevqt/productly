@@ -158,16 +158,6 @@ const vendor = () => {
   return merge(jquery);
 }
 
-const browserSync = (done) => {
-  browsersync.init({
-    server: {
-      baseDir: config.dist
-    },
-    port: 3000
-  });
-  done();
-}
-
 const browserSyncReload = (done) => {
   browsersync.reload();
   done();
