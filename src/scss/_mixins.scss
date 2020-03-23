@@ -1,0 +1,8 @@
+@mixin make-icon($color, $parent) {
+  &::before {
+    background-color: $color;
+  }
+  #{$parent}__inner {
+    background-color: $color;
+  }
+}

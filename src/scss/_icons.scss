@@ -38,38 +38,18 @@
   }
 
   &--purple {
-    &::before {
-      background-color: $purple;
-    }
-    #{$parent}__inner {
-      background-color: $purple;
-    }
+    @include make-icon($purple, $parent);
   }
 
   &--yellow {
-    &::before {
-      background-color: $yellow;
-    }
-    #{$parent}__inner {
-      background-color: $yellow;
-    }
+    @include make-icon($yellow, $parent);
   }
 
   &--red {
-    &::before {
-      background-color: $red;
-    }
-    #{$parent}__inner {
-      background-color: $red;
-    }
+    @include make-icon($red, $parent);
   }
 
   &--blue {
-    &::before {
-      background-color: $blue;
-    }
-    #{$parent}__inner {
-      background-color: $blue;
-    }
+    @include make-icon($blue, $parent);
   }
 }
