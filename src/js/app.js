@@ -13,6 +13,20 @@ $(() => {
     body.toggleClass("mobile-menu-is-shown");
   });
 
+  const affix = $(".affix");
+  const handleAffix = () => {
+    affix.each((index, elem) => {
+      const offset = $(elem).position().top;
+      if ($(window).scrollTop() > offset) {
+        affix.addClass("affix--active");
+      } else {
+        affix.removeClass("affix--active");
+      }
+    })
+  }
+  handleAffix();
+  $(window).scroll(handleAffix);
+
   $(".news-slider").slick({
     arrows: false,
     dots: true,
