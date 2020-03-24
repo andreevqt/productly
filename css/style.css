@@ -4859,13 +4859,20 @@ button:focus {
   margin: 40px auto 0 auto;
 }
 
-.b-header__buttons a:first-of-type {
-  margin-right: 15px;
-}
-
 @media (min-width: 992px) {
   .b-header__buttons {
     margin: 0 0 0 30px;
+  }
+}
+
+.b-header__btn:first-child {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  .b-header__btn:first-child {
+    margin-right: 15px;
+    margin-bottom: 0;
   }
 }
 
@@ -4887,7 +4894,6 @@ button:focus {
   display: block;
   padding: 10px 15px;
   color: #2f281e;
-  /* border-bottom: 1px solid $border-color; */
 }
 
 .b-header__menu-link--active, .b-header__menu-link:hover {
@@ -4999,7 +5005,18 @@ button:focus {
 
 .b-section__image {
   width: 100%;
-  height: auto;
+}
+
+@media (min-width: 576px) {
+  .b-section__image {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .b-section__image {
+    width: 100%;
+  }
 }
 
 .b-section__title, .b-section__desc {
@@ -5104,10 +5121,6 @@ button:focus {
   margin-bottom: 55px;
 }
 
-.b-hero {
-  padding-top: 30px;
-}
-
 .b-hero__title {
   font-size: 30px;
   line-height: 1.2;
@@ -5131,19 +5144,12 @@ button:focus {
 }
 
 .b-hero__content {
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-@media (min-width: 768px) {
-  .b-hero__content {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }
 
 @media (min-width: 992px) {
@@ -5160,7 +5166,6 @@ button:focus {
 
 .b-hero__image img {
   width: 100%;
-  height: auto;
 }
 
 @media (min-width: 576px) {
@@ -5172,7 +5177,6 @@ button:focus {
 @media (min-width: 992px) {
   .b-hero__image img {
     width: 100%;
-    margin-bottom: 0;
   }
 }
 
@@ -5209,26 +5213,23 @@ button:focus {
   color: #fff;
 }
 
-.b-icon::after {
-  position: absolute;
+.b-icon__blur {
   z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 50%;
-  background-color: #fffbf7;
-  content: "";
+  overflow: hidden;
+  top: 50%;
 }
 
-.b-icon::before {
-  content: "";
-  z-index: -1;
+.b-icon__blur, .b-icon__blur::before {
   position: absolute;
-  top: 50%;
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 19px;
+}
+
+.b-icon__blur::before {
+  top: 0;
+  content: "";
+  display: block;
   -webkit-filter: blur(27px);
   filter: blur(27px);
 }
@@ -5241,40 +5242,31 @@ button:focus {
   justify-content: center;
 }
 
-.b-icon--purple::before {
-  background-color: #7752be;
-}
-
+.b-icon--purple .b-icon__blur::before,
 .b-icon--purple .b-icon__inner {
   background-color: #7752be;
 }
 
-.b-icon--yellow::before {
-  background-color: #fab005;
-}
-
+.b-icon--yellow .b-icon__blur::before,
 .b-icon--yellow .b-icon__inner {
   background-color: #fab005;
 }
 
-.b-icon--red::before {
-  background-color: #f03e3d;
-}
-
+.b-icon--red .b-icon__blur::before,
 .b-icon--red .b-icon__inner {
   background-color: #f03e3d;
 }
 
-.b-icon--blue::before {
-  background-color: #4dadf7;
-}
-
+.b-icon--blue .b-icon__blur::before,
 .b-icon--blue .b-icon__inner {
   background-color: #4dadf7;
 }
 
 .b-test {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .b-test__icon {
@@ -5290,6 +5282,19 @@ button:focus {
 .b-test__descr {
   margin-bottom: 0;
   font-weight: 500;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .b-test__descr {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .b-test {
+    align-items: flex-start;
+  }
 }
 
 .b-team {
@@ -5427,10 +5432,9 @@ button:focus {
   margin-bottom: 25px;
 }
 
-.news-slider__item-thumb img,
-.news-slider__item-thumb source {
+.news-slider__item-thumb,
+.news-slider__item-thumb img {
   width: 100%;
-  height: auto;
 }
 
 .news-slider__item-meta {
@@ -5525,9 +5529,7 @@ button:focus {
 
 .calculator-panel__addons {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -7.5px;
-  margin-right: -7.5px;
+  flex-wrap: nowrap;
   margin-bottom: 20px;
 }
 
@@ -5561,13 +5563,20 @@ button:focus {
 .calculator-addon {
   position: relative;
   border: 1px solid #bcd0e5;
-  border-radius: 5px;
-  flex: 1 0 auto;
+  position: relative;
+  flex: 1 0 50%;
   max-width: 50%;
-  padding: 15px 10px;
-  margin: 7.5px;
+  padding: 15px 40px 15px 20px;
   font-weight: 500;
   cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: -1px;
+}
+
+.calculator-addon:first-child {
+  margin-left: 0;
 }
 
 .calculator-addon__icon {
@@ -5580,6 +5589,7 @@ button:focus {
 }
 
 .calculator-addon--selected {
+  z-index: 2;
   background-color: #fffbf5;
   border-color: #ff9900;
 }
