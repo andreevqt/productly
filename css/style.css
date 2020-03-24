@@ -4811,7 +4811,25 @@ button:focus {
 .b-header {
   padding-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #bcd0e5;
+  background-color: #fff;
+  transition: padding 0.15s ease-in;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.b-header__logo img {
+  height: 24px;
+  width: auto;
+}
+
+.b-header.affix--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 4;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .b-header__container {
@@ -4827,7 +4845,7 @@ button:focus {
   margin-left: auto;
   position: fixed;
   z-index: 1;
-  top: 63px;
+  top: 54px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -4911,7 +4929,10 @@ button:focus {
   .b-header {
     padding-top: 35px;
     padding-bottom: 35px;
-    border-bottom: none;
+    box-shadow: none;
+  }
+  .b-header .b-header__logo img {
+    height: auto;
   }
 }
 
