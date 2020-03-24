@@ -1,5 +1,10 @@
 import $ from "jquery";
 import "slick-carousel";
+import LazyLoad from "vanilla-lazyload";
+
+new LazyLoad({
+  elements_selector: ".lazy"
+});
 
 $(() => {
   const body = $(document.body);

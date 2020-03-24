@@ -26,7 +26,7 @@ block content
 
   section.b-section.b-section--tests
     .b-section__bg.b-section__bg--top
-    img.b-section__oval.b-section__oval--bottom.svg-responsive(src="images/bottom-bg.png")
+    img.b-section__oval.b-section__oval--bottom.lazy(data-src="images/bottom-bg.png")
     .container-xl
       .row
         .col-md-6.mx-auto
@@ -35,6 +35,7 @@ block content
       .row
         .b-test.col-lg-3.col-md-4
           .b-test__icon.b-icon.b-icon--purple
+            .b-icon__blur
             .b-icon__inner
               +use("#cursor", 12, 18)
           h5.b-test__title.
@@ -43,6 +44,7 @@ block content
             While most people enjoy casino gambling
         .b-test.col-lg-3.col-md-4
           .b-test__icon.b-icon.b-icon--yellow
+            .b-icon__blur
             .b-icon__inner
               +use("#link", 18, 18)
           h5.b-test__title.
@@ -51,6 +53,7 @@ block content
             Sports betting, lottery and bingo playing for the fun
         .b-test.col-lg-3.col-md-4
           .b-test__icon.b-icon.b-icon--red
+            .b-icon__blur
             .b-icon__inner
               +use("#heart", 18, 18)
           h5.b-test__title.
@@ -59,6 +62,7 @@ block content
             The Myspace page defines the individual. 
         .b-test.col-lg-3.col-md-4
           .b-test__icon.b-icon.b-icon--blue
+            .b-icon__blur
             .b-icon__inner
               +use("#sandwatches", 18, 18)
           h5.b-test__title.
@@ -92,13 +96,13 @@ block content
           p.
             If you are looking for a new way to promote your business that won’t cost you more money
         .col
-          img.b-section__image(src="images/design.svg", alt)
+          img.b-section__image.lazy(data-src="images/design.svg", alt)
 
   section.b-section.pb-0
     .container-xl
       .row
         .col-md-6.d-flex
-          img.b-section__image.ml-auto(src="images/pm.svg", alt)
+          img.b-section__image.ml-auto.lazy(data-src="images/pm.svg", alt)
         .b-section__content.col.pl-md-5
           span.b-section__title-before.
             Easier decision making for
@@ -137,10 +141,10 @@ block content
           p.
             If you are looking for a new way to promote your business that won’t cost you more money
         .col.d-flex.ml-auto
-          img.b-section__image(src="images/marketers.svg", alt)
+          img.b-section__image.lazy(data-src="images/marketers.svg", alt)
 
   section.b-section.b-section--team.pb-0
-    img.b-section__oval.b-section__oval--top(src="images/top-bg.png")
+    img.b-section__oval.b-section__oval--top.lazy(data-src="images/top-bg.png")
     .b-section__bg.b-section__bg--bottom
     .b-section__container.container-xl
       .row
@@ -153,27 +157,27 @@ block content
           a.btn.btn--primary(href="#").
             Contact our expert
       .b-team.b-team--left.b-team--1
-        img.b-team__avatar(src="images/team-1.png")
+        img.b-team__avatar.lazy(data-src="images/team-1.png")
         .b-team__cloud
           .b-team__cloud-inner.
             I can take care of your pitch
       .b-team.b-team--right.b-team--2
-        img.b-team__avatar(src="images/team-2.png")
+        img.b-team__avatar.lazy(data-src="images/team-2.png")
         .b-team__cloud
           .b-team__cloud-inner.
             I can help marketing strategy
       .b-team.b-team--right.b-team--3
-        img.b-team__avatar(src="images/team-3.png")
+        img.b-team__avatar.lazy(data-src="images/team-3.png")
         .b-team__cloud
           .b-team__cloud-inner.
             I can design you website
       .b-team.b-team--right.b-team--4
-        img.b-team__avatar(src="images/team-4.png")
+        img.b-team__avatar.lazy(data-src="images/team-4.png")
         .b-team__cloud
           .b-team__cloud-inner.
             I will define the profile of your users
       .b-team.b-team--right.b-team--5
-        img.b-team__avatar(src="images/team-5.png")
+        img.b-team__avatar.lazy(data-src="images/team-5.png")
         .b-team__cloud
           .b-team__cloud-inner.
             I can prototype your app

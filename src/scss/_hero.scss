@@ -16,9 +16,6 @@
     }
   }
 
-  &__row {
-  }
-
   &__content {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -46,7 +43,6 @@
       @include media-breakpoint-up(lg) {
         width: 100%;
       }
-
     }
   }
 

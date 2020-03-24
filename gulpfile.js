@@ -118,15 +118,9 @@ const js = () => {
 
 const images = () => {
   const filetypes = "{png,gif,jpg,jpeg,svg}";
-  return merge(
-    gulp
-      .src([`./images/**/*.${filetypes}`, `!./images/favicon`])
-      .pipe(gulp.dest(config.dist + "/images")),
-    // favicon
-    gulp
-      .src(`./images/favicon/*.${filetypes}`)
-      .pipe(gulp.dest(config.dist))
-  );
+  return gulp
+    .src([`./images/**/*.${filetypes}`, `!./images/favicon`])
+    .pipe(gulp.dest(config.dist + "/images"));
 }
 
 const webp = () => {
@@ -156,11 +150,6 @@ const vendor = () => {
     .pipe(gulp.dest(dest)); */
 
   return merge(jquery);
-}
-
-const browserSyncReload = (done) => {
-  browsersync.reload();
-  done();
 }
 
 const html = () => {
@@ -200,6 +189,16 @@ const pngSprites = () => {
     .pipe(gulp.dest("./src/scss"))
 
   return merge(imgStream, cssStream);
+}
+
+const browserSync = (done) => {
+  browsersync.init({
+    server: {
+      baseDir: config.dist
+    },
+    port: 3000
+  });
+  done();
 }
 
 const svgSprites = () => {

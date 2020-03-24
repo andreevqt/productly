@@ -1,27 +1,7 @@
 @mixin make-icon($color, $parent) {
-  &::before {
-    background-color: $color;
-  }
+  #{$parent}__blur::before,
   #{$parent}__inner {
     background-color: $color;
-  }
-}
-
-@mixin make-responsive-picture($w: 70%, $w-sm: 50%, $w-md: 50%, $w-lg: 100%,  $w-xl: 100%) {
-  width: $w;
-  height: auto;
-
-  @include media-breakpoint-up(sm) {
-    width: $w-sm;
-  }
-
-  @include media-breakpoint-up(md) {
-    
-  }
-
-  @include media-breakpoint-up(lg) {
-    width: 100%;
-    margin-bottom: 0;
   }
 }
 

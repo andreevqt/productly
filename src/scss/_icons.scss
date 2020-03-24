@@ -6,27 +6,24 @@
   position: relative;
   color: $white;
 
-  &::after {
-    position: absolute;
+  &__blur {
     z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 50%;
-    background-color: #fffbf7;
-    content: "";
-  }
-
-  &::before {
-    content: "";
-    z-index: -1;
-    position: absolute;
+    overflow: hidden;
     top: 50%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 19px;
-    filter: blur(27px);
+    
+    &,
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &::before {
+      top: 0;
+      content: "";
+      display: block;
+      filter: blur(27px);
+    }
   }
 
   &__inner {
