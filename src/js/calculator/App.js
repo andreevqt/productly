@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import Addon from "./components/Addon";
 import Range from "./components/Range";
 
-const MIN_REVENUE   = 0;
-const MAX_REVENUE   = 200000;
-const STEP          = 1000;
+const MIN_REVENUE = 0;
+const MAX_REVENUE = 200000;
+const STEP = 1000;
 const INITIAL_PRICE = 100;
-const EVENT_PRICE  = 50;
-const FLOW_PRICE   = 15;
+const EVENT_PRICE = 50;
+const FLOW_PRICE = 15;
 
 const App = () => {
   const [income, setIncome] = useState([0]);
@@ -87,7 +87,8 @@ const App = () => {
         <div className="calculator-panel">
           <div className="calculator-panel__title">What is you current monthly revenue?</div>
           <div className="calculator-panel__currency">
-            <div className="calculator-panel__currency-sign">$</div>{formatNumber(income[0])}
+            <span className="calculator-panel__currency-sign">$</span>
+            <span className="calculator-panel__currency-value">{formatNumber(income[0])}</span>
           </div>
           <div className="calculator-panel__range-container">
             <Range
@@ -122,9 +123,9 @@ const App = () => {
         <div className="calculator-panel">
           <div className="calculator-panel__title d-flex justify-content-center align-items-flex-end">Price <svg width="16" height="16" style={{ marginLeft: "8px", fill: "#ff9900" }}><use xlinkHref="#question" /></svg></div>
           <div className="calculator-panel__currency">
-            <div className="calculator-panel__currency-sign">$</div>
-            {formatNumber(perMonth + addonsPrice)}
-            <div className="calculator-panel__currency-period">/ month</div>
+            <span className="calculator-panel__currency-sign">$</span>
+            <span className="calculator-panel__currency-value">{formatNumber(perMonth + addonsPrice)}</span>
+            <span className="calculator-panel__currency-period">/ month</span>
           </div>
           <div className="calculator-panel__buttons">
             <a href="#" className="btn btn--primary btn--lg btn--rounded mx-auto">Start free 14 day trial</a>

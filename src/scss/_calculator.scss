@@ -12,19 +12,27 @@
     text-align: center;
   }
 
-  &__currency {
-    position: relative;
+  &__currency-sign,
+  &__currency-value,
+  &__period {
+    display: inline-block;
+    line-height: 1;
+  }
+
+  &__currency-value {
     font-size: 30px;
     font-weight: 700;
-    line-height: 1;
-    margin-bottom: 40px;
     @include media-breakpoint-up(md) {
       font-size: 70px;
     }
   }
 
+  &__currency {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
   &__currency-sign {
-    display: inline-block;
     font-size: 16px;
     margin-left: -15px;
     position: absolute;
@@ -76,10 +84,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-left: -1px;
+  border-radius: 5px;
 
   &:first-child {
-    margin-left: 0;
+    margin-right: 15px;
   }
 
   &__icon {

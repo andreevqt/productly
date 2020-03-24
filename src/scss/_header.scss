@@ -1,25 +1,25 @@
 .b-header {
   $parent: &;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: $white;
   transition: padding 0.15s ease-in;
-  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
-  &__logo img{
+  &__logo img {
     height: 24px;
     width: auto;
   }
 
   &.affix--active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     padding-top: 15px;
     padding-bottom: 15px;
-    z-index: 4;
-    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
 
   &__container {
@@ -108,7 +108,7 @@
     padding-bottom: 35px;
     box-shadow: none;
 
-    #{$parent}__logo img{
+    #{$parent}__logo img {
       height: auto;
     }
   }

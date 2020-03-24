@@ -47,5 +47,9 @@ button:focus {
   }
 }
 
-.svg-responsive {
+.content-wrapper {
+  padding-top: 54px;
+  @include media-breakpoint-up(lg) {
+    padding-top: 118px;
+  }
 }
