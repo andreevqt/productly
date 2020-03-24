@@ -4808,7 +4808,22 @@ button:focus {
   background-image: url("../images/checkbox.svg");
 }
 
+.content-wrapper {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  .content-wrapper {
+    padding-top: 118px;
+  }
+}
+
 .b-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #fff;
@@ -4822,13 +4837,8 @@ button:focus {
 }
 
 .b-header.affix--active {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   padding-top: 15px;
   padding-bottom: 15px;
-  z-index: 4;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -5526,22 +5536,28 @@ button:focus {
   text-align: center;
 }
 
-.calculator-panel__currency {
-  position: relative;
+.calculator-panel__currency-sign, .calculator-panel__currency-value, .calculator-panel__period {
+  display: inline-block;
+  line-height: 1;
+}
+
+.calculator-panel__currency-value {
   font-size: 30px;
   font-weight: 700;
-  line-height: 1;
-  margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
-  .calculator-panel__currency {
+  .calculator-panel__currency-value {
     font-size: 70px;
   }
 }
 
+.calculator-panel__currency {
+  position: relative;
+  margin-bottom: 40px;
+}
+
 .calculator-panel__currency-sign {
-  display: inline-block;
   font-size: 16px;
   margin-left: -15px;
   position: absolute;
@@ -5593,11 +5609,11 @@ button:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-left: -1px;
+  border-radius: 5px;
 }
 
 .calculator-addon:first-child {
-  margin-left: 0;
+  margin-right: 15px;
 }
 
 .calculator-addon__icon {
