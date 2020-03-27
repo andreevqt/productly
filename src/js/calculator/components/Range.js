@@ -15,7 +15,7 @@ const Range = (outerProps) => {
             backgroundColor: "#fff",
             borderRadius: '50%',
             transition: 'box-shadow 0.05s linear',
-            boxShadow: isDragged ? "0px 0px 15px rgba(23, 58, 86, 0.6)" : "0px 0px 11px rgba(23, 58, 86, 0.6)",
+            boxShadow: isDragged ? "0px 0px 15px rgba(23, 58, 86, 0.3)" : "0px 0px 11px rgba(23, 58, 86, 0.3)",
             border: "2px solid #ff9900",
             display: "flex",
             alignItems: "center",
