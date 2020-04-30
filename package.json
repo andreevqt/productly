@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "slick-carousel": "^1.8.1",
     "vanilla-lazyload": "^13.0.1"
   }
